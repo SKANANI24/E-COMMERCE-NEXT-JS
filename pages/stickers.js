@@ -6,8 +6,8 @@ const Srickers = () => {
     <div>
       <section className="text-gray-600 body-font container">
   <div className="container px-5 py-24 mx-auto ">
-    <div className="flex flex-wrap ">
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+    <div className="flex flex-wrap justify-center">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -18,7 +18,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -29,7 +29,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -40,7 +40,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -51,7 +51,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -62,7 +62,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -73,7 +73,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
@@ -84,7 +84,7 @@ const Srickers = () => {
           <p className="mt-1">M , L , XL , XXL , XXXL </p>
         </div>
       </div>
-      <div className=" md:text-left lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
+      <div className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9">
         <a className="block relative  rounded overflow-hidden">
           <Image alt="ecommerce" width={1000} height={1000} className="m-auto md:mx-0 block" src={"/sticker.png"}/>
         </a>
