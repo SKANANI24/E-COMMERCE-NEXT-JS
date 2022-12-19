@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ImCart } from "react-icons/im";
 import {
   AiFillCloseCircle,
   AiFillPlusCircle,
   AiFillMinusCircle,
 } from "react-icons/ai";
+import {RiAccountPinCircleFill ,RiShoppingCartFill} from 'react-icons/ri'
 
-const Navbar = ({ cart,subTotal, addToCart, removeFromCart, clearCart }) => {
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
   const ref = useRef();
 
   const toggleCart = () => {
@@ -50,10 +50,8 @@ const Navbar = ({ cart,subTotal, addToCart, removeFromCart, clearCart }) => {
           </Link>
         </div>
         <div className=" nav-right  flex right-0">
-          <ImCart
-            onClick={toggleCart}
-            className="cursor-pointer text-2xl mx-2"
-          />
+        <Link href={'/login'}><RiAccountPinCircleFill className="cursor-pointer text-2xl mx-2"/></Link>
+          <RiShoppingCartFill onClick={toggleCart} className="cursor-pointer text-2xl mx-2" />
         </div>
       </div>
 
@@ -82,7 +80,7 @@ const Navbar = ({ cart,subTotal, addToCart, removeFromCart, clearCart }) => {
                   className="lining-nums  border-x-2 bg-slate-50 my-2 rounded-md shadow-lg p-3 "
                 >
                   <div className="flex justify-between">
-                    <p>{cart[key]?.name}</p>
+                    <p>{cart[key]?.title}</p>
                     <div className="flex justify-center items-center text-lg ">
                       <AiFillMinusCircle className="cursor-pointer" onClick={()=>{return removeFromCart(key)}}/>
                       <span className="mx-2">{cart[key].qty}</span>
@@ -93,7 +91,7 @@ const Navbar = ({ cart,subTotal, addToCart, removeFromCart, clearCart }) => {
                             key,
                             cart[key].qty,
                             cart[key].price,
-                            cart[key].name,
+                            cart[key].title,
                             cart[key].size,
                             cart[key].variant
                           );

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
@@ -20,13 +20,13 @@ function MyApp({ Component, pageProps }) {
     //eslint-disable-next-line
   }, []);
 
-  const addToCart = (itemCode, qty, price, name, size, variant) => {
+  const addToCart = (itemCode, qty, price, title, size, variant) => {
     let newCart = cart;
     if (itemCode in cart) {
       newCart[itemCode].qty = cart[itemCode].qty + 1;
 
     } else {
-      newCart[itemCode] = { qty: 1, price, name, size, variant };
+      newCart[itemCode] = { qty: 1, price, title, size, variant };
     }
     setCart(newCart);
     saveCart(newCart);
@@ -46,7 +46,6 @@ function MyApp({ Component, pageProps }) {
     let newCart = cart;
     if (itemCode in cart) {
       newCart[itemCode].qty = cart[itemCode].qty - 1;
-      console.log(newCart[itemCode])
     }
     if (newCart[itemCode].qty <= 0) {
       delete newCart[itemCode]; 

@@ -130,7 +130,7 @@ const Footer = () => {
             <p className="text-gray-500 text-sm text-center sm:text-left">
               © 2022 E-Commerce —
               <a
-                href="https://twitter.com/knyttneve"
+                href="https://twitter.com/KananiSanidhya"
                 rel="noopener noreferrer"
                 className="text-gray-600 ml-1"
                 target="_blank"
