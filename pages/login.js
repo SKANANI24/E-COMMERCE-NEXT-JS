@@ -1,7 +1,55 @@
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const router = useRouter();
+
+  useEffect(()=>{
+    {localStorage.getItem('token') ? router.push('/') : ''}
+  },[])
+
+  const handleChange=(e)=>{
+     if(e.target.name==='email'){
+        setEmail(e.target.value);
+      }else if(e.target.name==='password'){
+        setPassword(e.target.value);
+      }
+  }
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    const data = {email , password};
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOSTNAME}/api/login`,{
+      method:"POST",
+      headers:{'Content-type' : 'application/json'},
+      body : JSON.stringify(data),
+    });
+    const json = await response.json();
+    console.log(json)
+    if(json.success){
+      localStorage.setItem('token' , json.token)
+      toast.success("Login successfull !", {
+        position: "top-left",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setEmail('')
+      setPassword('')
+      router.push('/')
+    }else{
+      toast.error(json.error)
+    } 
+  }
+
   return (
     <>
       <div class="min-h-screen bg-orange-100-100 py-6 flex flex-col justify-center sm:py-12">
@@ -35,7 +83,7 @@ const Login = () => {
                   </Link>
                 </span>
               </div>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label
                     for="email"
@@ -44,6 +92,8 @@ const Login = () => {
                     Your email
                   </label>
                   <input
+                  value={email}
+                  onChange={handleChange}
                     type="email"
                     name="email"
                     id="email"
@@ -60,6 +110,8 @@ const Login = () => {
                     Password
                   </label>
                   <input
+                  value={password}
+                  onChange={handleChange}
                     type="password"
                     name="password"
                     id="password"

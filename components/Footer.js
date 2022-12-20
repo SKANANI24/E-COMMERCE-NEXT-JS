@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
               <Image src={'/logo.png'} height={100} width={100} className='w-full' alt="E-Commerce" />
             </a>
-            <p className="mt-2 pr-6 text-sm text-gray-500">
+            <p className="pl-6 mt-2  text-sm text-gray-500">
               E-Commerce Platform - Here you get whatever you want 
             </p>
           </div>
@@ -21,104 +22,102 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
+                  <Link className="text-gray-600 hover:text-gray-800" href={'/tshirts'}>T-Shirts</Link>
+                </li>
+                <li>
+                  <Link href={'/hoodies'} className="text-gray-600 hover:text-gray-800">
+                    Hoodies
+                  </Link>
+                </li>
+                <li>
+                  <Link href={'/stickers'} className="text-gray-600 hover:text-gray-800">
+                    Stickers
+                  </Link>
+                </li>
+                <li>
+                  <Link href={'/mugs'} className="text-gray-600 hover:text-gray-800">
+                    Mugs
+                  </Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+                ABOUT
+              </h2>
+              <nav className="list-none mb-10">
+                <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    First Link
+                    Contact Us
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
+                    Careers
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
+                    Corporte Information
                   </a>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                HELP
               </h2>
               <nav className="list-none mb-10">
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    First Link
+                    Payments
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
+                    Shipping
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
+                    Cancellation & Returns 
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
+                    FAQ
                   </a>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                POLICY
               </h2>
               <nav className="list-none mb-10">
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    First Link
+                    Return Policy
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
+                    Terms of Use
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
+                    Security
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
+                    Privacy
                   </a>
                 </li>
               </nav>

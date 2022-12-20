@@ -134,7 +134,7 @@ const Checkout = ({ cart, addToCart, removeFromCart,subTotal }) => {
                         className="lining-nums  border-x-2 bg-slate-50 my-2 rounded-md shadow-lg p-3 "
                       >
                         <div className="flex justify-between">
-                          <p>{cart[key]?.name}</p>
+                          <p>{cart[key]?.title}  {`(${cart[key].size}/${cart[key].variant})`}</p>
                           <div className="flex justify-center items-center text-lg ">
                             <AiFillMinusCircle
                               className="cursor-pointer"
@@ -150,7 +150,7 @@ const Checkout = ({ cart, addToCart, removeFromCart,subTotal }) => {
                                   key,
                                   cart[key].qty,
                                   cart[key].price,
-                                  cart[key].name,
+                                  cart[key].title,
                                   cart[key].size,
                                   cart[key].variant
                                 );
