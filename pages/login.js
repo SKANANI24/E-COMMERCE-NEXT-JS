@@ -52,33 +52,33 @@ const Login = () => {
 
   return (
     <>
-      <div class="min-h-screen bg-orange-100-100 py-6 flex flex-col justify-center sm:py-12">
-        <div class="relative py-3 sm:max-w-xl sm:mx-auto max-sm:mt-32 mt-14">
-          <div class="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-          <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-16">
-            <div class="max-w-md mx-auto">
-              <div class="text-center ">
-                <div class="flex items-center justify-center">
+      <div className="min-h-screen bg-orange-100-100 py-6 flex flex-col justify-center sm:py-12">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto max-sm:mt-32 mt-14">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+          <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-16">
+            <div className="max-w-md mx-auto">
+              <div className="text-center ">
+                <div className="flex items-center justify-center">
                   <svg
                     fill="none"
                     viewBox="0 0 24 24"
-                    class="w-12 h-12 text-blue-500"
+                    className="w-12 h-12 text-blue-500"
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
                     />
                   </svg>
                 </div>
-                <h2 class="text-4xl tracking-tight">
+                <h2 className="text-4xl tracking-tight">
                   Sign in into your account
                 </h2>
-                <span class="text-sm">
+                <span className="text-sm">
                   or{" "}
-                  <Link href={'/signup'} class="text-blue-500">
+                  <Link href={'/signup'} className="text-blue-500">
                     register a new account
                   </Link>
                 </span>
@@ -86,7 +86,7 @@ const Login = () => {
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-purple-900 dark:text-white"
                   >
                     Your email
@@ -104,7 +104,7 @@ const Login = () => {
                 </div>
                 <div>
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block mb-2 text-sm font-medium text-purple-900 dark:text-white"
                   >
                     Password
@@ -112,6 +112,7 @@ const Login = () => {
                   <input
                   value={password}
                   onChange={handleChange}
+                  autoComplete='on'
                     type="password"
                     name="password"
                     id="password"
@@ -133,7 +134,7 @@ const Login = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label
-                        for="remember"
+                        htmlFor="remember"
                         className="text-purple-500 dark:text-purple-300"
                       >
                         Remember me

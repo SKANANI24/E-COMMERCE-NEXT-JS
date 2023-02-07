@@ -6,7 +6,7 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     try {
       let user = new User({...req.body,password: CryptoJS.AES.encrypt(req.body.password,
-          "SECRET_PW_KEY"
+          process.env.AES_SECRET
         ).toString(),
       });
       await user.save();

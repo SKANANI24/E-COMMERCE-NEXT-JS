@@ -8,22 +8,18 @@ const handler = async (req, res) => {
     try {
       let user = await User.findOne({ email: req.body.email });
       if (user) {
-        const bytes = CryptoJS.AES.decrypt(user.password, "SECRET_PW_KEY");
-        if (
-          user.email === req.body.email &&
-          req.body.password === bytes.toString(CryptoJS.enc.Utf8)
-        ) {
+        const bytes = CryptoJS.AES.decrypt(
+          user.password,
+          process.env.AES_SECRET
+        );
+        if (user.email === req.body.email &&req.body.password === bytes.toString(CryptoJS.enc.Utf8)) {
           const token = jwt.sign(
             { email: user.email, name: user.name },
-            "SECRET_JWT_KEY",
+            process.env.JWT_SECRET,
             { expiresIn: "1d" }
           );
           res.status(200).send({ token, success: true });
-        } else {
-          res
-            .status(400)
-            .send({ success: false, error: "Invalid Credentials" });
-        }
+        } else {res.status(400).send({ success: false, error: "Invalid Credentials" });}
       } else {
         res.status(404).send({ success: false, error: "Invalid Credentials" });
       }

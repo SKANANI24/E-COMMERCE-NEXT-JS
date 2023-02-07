@@ -18,13 +18,13 @@ const hoodies = ({ products }) => {
                   href={`/product/${products[item].slug}`}
                   className=" md:text-left lg:w-1/6 md:w-1/2 p-4 w-full shadow-lg cursor-pointer m-9"
                 >
-                  <a className="block relative  rounded overflow-hidden">
+                  <span className="block relative  rounded overflow-hidden">
                     <img
                       alt="ecommerce"
                       className="m-auto md:mx-0 block"
                       src={products[item].img}
                     />
-                  </a>
+                  </span>
                   <div className="mt-4 text-center md:text-left">
                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       {products[item].desc}
@@ -42,11 +42,11 @@ const hoodies = ({ products }) => {
                     {products[item].size.includes('XXXL')&& <span className="border border-grey-500 px-1 mx-1">XXXL</span>}
                     </div>
                     <div className="mt-1">
-                    {products[item].color.includes('Red')&& <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('Blue')&& <button class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('Black')&& <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('Purple')&& <button class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('Yellow')&& <button class="border-2 border-gray-300 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('Red')&& <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('Blue')&& <button className="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('Black')&& <button className="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('Purple')&& <button className="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('Yellow')&& <button className="border-2 border-gray-300 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>}
                     </div>
                   </div>
                 </Link>

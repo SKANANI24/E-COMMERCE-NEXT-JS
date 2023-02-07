@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { BsBoxArrowInRight } from "react-icons/bs";
 import { toast } from "react-toastify";
 
 const Signup = () => {
@@ -9,11 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const router = useRouter();
-  useEffect(() => {
-    {
-      localStorage.getItem("token") ? router.push("/") : "";
-    }
-  }, []);
+  useEffect(() => {localStorage.getItem("token") ? router.push("/") : ""}, []);
   const handleChange = (e) => {
     if (e.target.name === "name") {
       setName(e.target.value);
@@ -27,11 +22,14 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { name, email, password };
-    const response = await fetch(`${process.env.NEXT_PUBLIC_HOSTNAME}/api/signup`, {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_HOSTNAME}/api/signup`,
+      {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -145,6 +143,7 @@ const Signup = () => {
                 <input
                   value={password}
                   onChange={handleChange}
+                  autoComplete="off"
                   type="password"
                   name="password"
                   id="password"
